@@ -1,0 +1,52 @@
+body {
+    background-image: url(img/background.png);
+    background-size: contain;
+    background-repeat: repeat-x;
+    font-family: Georgia;
+}
+p {
+    text-align: center;
+}
+
+h1 {
+    font-family: Comic Sans MS;
+    font-size: 60px;
+    color: darkblue;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h3 a {
+    color: red;
+}
+
+h4 {
+    font-style: italic;
+text-align: center;
+}
+
+p.oke {
+    color: orange;
+}
+
+p a {
+    color: blue;
+    text-decoration: none;
+}
+
+p a:hover {
+    color: rgb(11, 242, 203);
+    background-color: blue;
+	transition: 2s;
+}
+p.iya {
+    line-height: 30px;
+}
+
+p.iya a {
+    font-weight:bold;
+    text-decoration: none;
+}
