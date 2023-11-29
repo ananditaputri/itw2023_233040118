@@ -121,8 +121,16 @@ body {
     height: 430px;
     background-image: url(img/Furina.webp);
     background-size: cover;
-    background-position: 0 -0px;
+    background-position: 0 -20px;
     margin-bottom: 15px;
+}
+
+.content .hero3 {
+    width: 498px;
+    height: 281px;
+    background-image: url(img/furina\ gif.gif);
+    background-repeat: no-repeat;
+    margin: 50px auto;
 }
 
 .content .penulis {
