@@ -14,7 +14,7 @@ nav {
     background-color: blueviolet;
     justify-content: space-around;
     /* padding: 20px 0; */
-    color: rgb(202, 145, 255);
+    color: rgb(218, 179, 255);
     height: 50px;
     align-items: center;
 }
@@ -32,13 +32,13 @@ nav ul {
 }
 
 nav ul li a {
-    color: rgb(175, 108, 238);
+    color: rgb(217, 180, 252);
     text-decoration: none;
     font-size: 0.8em;
 }
 
 nav ul li a:hover {
-    color: rgb(239, 225, 251);
+    color: rgb(243, 235, 250);
 }
 
 /* Hamburger menu */
