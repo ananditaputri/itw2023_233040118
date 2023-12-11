@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: rgb(2, 71, 2);
+    font-size: 18px;
+    font-family: 'Open Sans' Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+/* Container */
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas:
+        'hero hero feature-1'
+        'hero hero feature-2';
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 300px;
+    background-image: url(img/wnyng.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+}
+
+.hero>* {
+    display: none;
+}
+
+.features {
+    background-color: white;
+    color: black;
+    display: grid;
+    /* justify-content: center; 
+    align-content: center; */
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background-image: url(img/serum.webp);
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url(img/1\ set.jpg);
+    background-size: cover;
+}
+
+.features .price {
+    font-size: 2em;
+    font-weight: 200;
+}
+
+/* Navigatin */
+.menu {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+
+.menu .brand {
+    font-size: 1.2em;
+    columns: white;
+}
+
+.menu ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+}
+
+.menu a {
+    display: grid;
+    background-color: rgb(160, 255, 160);
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: rgb(160, 255, 160);
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-sizing: 0 0 2px rgba(32, 31, 31, 0.3);
+}
+
+.service .icon {
+    font-size: 1.5em;
+}
+
+.service p {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+}
+
+.gallery h2 {
+    /* grid-column-start: 1; 
+     grid-column-end: -1; */
+    grid-column: 1/-1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Responsive Breakpoint */
+@media (max-width: 1024px) {
+    .menu {
+        order: inherit;
+        grid-template-columns: 1fr;
+    }
+
+    .menu .brand {
+        display: none;
+    }
+
+    .hero>* {
+        display: block;
+        color: black;
+        text-shadow: rgb(117, 107, 107);
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        order: -1;
+        justify-items: end;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu ul {
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(160, 255, 160);
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+
+
+    }
+
+    .menu .slide {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+@media (max-width: 600px) {
+    .body {
+        margin: 15px;
+    }
+
+    .header {
+        grid-template-areas:
+            'hero'
+            'feature-1'
+            'feature-2';
+    }
+}

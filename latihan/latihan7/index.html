@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNISFREE SHOP</title>
+    <link rel="stylesheet" href="link rel=" preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=PT+Sans+Caption&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">INNISFREE SHOP</h2>
+                <p class="sub-heading">Serum and Skin Care</p>
+            </div>
+            <div class="features feature-1">
+                <h4 class="price">IDR 350K</h4>
+                <p class="item">Serum</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">IDR 950K</h4>
+                <p class="item">Skin Care</p>
+            </div>
+        </header>
+        <nav class="menu">
+            <div class="menu-toggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="brand">
+                <h1>INNISFREE SHOP</h1>
+            </div>
+            <ul class="menu-list">
+                <li><a href="">HOME</a></li>
+                <li><a href="">PRODUCTS</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">GALLERY</a></li>
+            </ul>
+        </nav>
+        <section class="services">
+            <div class="service">
+                <div class="icon">💻</div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eius natus unde, perferendis autem optio!</p>
+            </div>
+            <div class="service">
+                <div class="icon">🎓</div>
+                <h3>Online Course</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque nam ad minus veritatis consectetur quam.</p>
+            </div>
+            <div class="service">
+                <div class="icon">🎙️</div>
+                <h3>Podcast</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolores, labore corrupti voluptatum nihil nostrum.</p>
+            </div>
+            <div class="service">
+                <div class="icon">💆🏻‍♀</div>
+                <h3>Merch</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempore odio nemo consequuntur voluptatem magnam.</p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <img src="https://source.unsplash.com/random/200x200" alt="">
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            <img src="https://source.unsplash.com/random/208x208" alt="">
+            <img src="https://source.unsplash.com/random/209x209" alt="">
+        </section>
+    </div>
+
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        });
+    </script>
+</body>
+
+</html>
